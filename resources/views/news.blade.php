@@ -1,3 +1,4 @@
+
 @extends('layout')
 
 @section('content')
@@ -43,7 +44,7 @@
             <p>
                 <strong>Category:</strong> {{ $article->category->name ?? 'N/A' }},
                 <strong>Source:</strong> {{ $article->source->name ?? 'N/A' }},
-                <strong>Published:</strong> {{ $article->published_at->diffForHumans() }}
+                <strong>Published:</strong> {{ $article->created_at->diffForHumans() }}
             </p>
         </div>
     </div>

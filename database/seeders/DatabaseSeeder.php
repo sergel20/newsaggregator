@@ -12,7 +12,7 @@ class DatabaseSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run():void
     {
         // \App\Models\User::factory(10)->create();
 
@@ -20,5 +20,10 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-    }
+    \App\Models\Category::factory()->count(5)->create();
+    \App\Models\Source::factory()->count(3)->create();
+    \App\Models\Article::factory()->count(20)->create();
 }
+
+    }
+

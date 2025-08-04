@@ -17,7 +17,7 @@ public function register(Request $request)
     $user=User::create($fields);
     auth()->login($user);
 
-    return redirect("/home");
+    return redirect("/news");
 }
 
     }

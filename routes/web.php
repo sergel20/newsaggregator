@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\NewsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,6 +15,7 @@ use App\Http\Controllers\UserController;
 */
 
 Route::get('/home', function () {
-    return view('news');
+    return view('home');
 });
 Route::post("/formregistration", [UserController::class,'register']);
+Route::get("/news", [NewsController::class,'feed']);
